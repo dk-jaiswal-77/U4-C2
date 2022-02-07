@@ -5,9 +5,10 @@ const fixedSchema = mongoose.Schema({
     balance : {type : Number, required : true},
     interestRate : {type : Number, required : true}, 
     startDate : {type : Date, required : true}, 
-    maturityDate : {type : Date, required : true}
+    maturityDate : {type : Date, required : true}, 
+    master_id : {type : mongoose.Schema.Types.ObjectId, required : true, ref : "master"}
 }, {versionKey : false, timestamps : true});
 
 const Fixed = mongoose.model("fixed", fixedSchema);
 
-model.exports = Fixed;
+module.exports = Fixed;

@@ -8,9 +8,9 @@ const userSchema = mongoose.Schema({
     email : {type : String, required : true},
     address : {type : String, required : true},
     gender : {type : String, required : false, default : "Female"},
-    type : {type : String, required : false, default : "customer"},
+    type : {type : String, required : false, default : "Customer"}
 }, {versionKey : false, timestamps : true});
 
 const User = mongoose.model("user", userSchema);
 
-model.exports = User;
+module.exports = User;
